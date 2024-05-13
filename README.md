@@ -1,3 +1,7 @@
+## Available Scripts
+
+Open [https://664222c54f5bf1188f3ef710--curious-beignet-93c575.netlify.app/](https://664222c54f5bf1188f3ef710--curious-beignet-93c575.netlify.app/) to view it in your browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
