@@ -1,5 +1,5 @@
 {
-    "date": "2024-05-13",
+    "date": "10th May 2024",
     "dayName": "Friday",
     "totalJobs": 10,
     "totalApplicants": 50,
@@ -27,6 +27,39 @@
         "img": "/man4.png",
         "name": "Arshad Khan",
         "resumeLink": "/resumes/Arshad_Khan_resume.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      }
+
+
+      ,
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
       },
       {
         "img": "/man5.png",

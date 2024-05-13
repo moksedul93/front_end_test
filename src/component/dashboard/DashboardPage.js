@@ -4,6 +4,7 @@ import PenImage from "../../assets/pen.png";
 
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);
+  const [displayedApplicants, setDisplayedApplicants] = useState(5); // State to keep track of the number of displayed applicants
 
   useEffect(() => {
     // Fetch dashboard data from the JSON file
@@ -13,9 +14,17 @@ const Dashboard = () => {
       .catch((error) => console.error("Error fetching dashboard data:", error));
   }, []);
 
+  const handleSeeMore = () => {
+    // Increase the number of displayed applicants by 5 when "See More" is clicked
+    setDisplayedApplicants(
+      (prevDisplayedApplicants) => prevDisplayedApplicants + 5
+    );
+  };
+
   if (!dashboardData) {
     return <div>Loading...</div>;
   }
+
   return (
     <div className=" bg-black px-4 py-7">
       <Header />
@@ -70,42 +79,51 @@ const Dashboard = () => {
           Matched Applicants
         </h3>
         <ul>
-          {dashboardData.matchApplicants.map((applicant, index, array) => (
-            <li key={index}>
-              <div
-                className={`flex justify-between py-4 ${
-                  index !== array.length - 1
-                    ? "border-b border-[rgba(255, 255, 255, 0.25)]"
-                    : ""
-                }`}
-              >
-                <div className="flex justify-between">
-                  <img
-                    className="w-6 h-6 rounded-full"
-                    src={applicant.img}
-                    alt={applicant.name}
-                  />
-                  <span className="ml-2 text-white text-sm leading-[16.94px]">
-                    {applicant.name}
-                  </span>
+          {/* Display applicants based on the number of displayedApplicants */}
+          {dashboardData.matchApplicants
+            .slice(0, displayedApplicants)
+            .map((applicant, index, array) => (
+              <li key={index}>
+                <div
+                  className={`flex justify-between py-4 ${
+                    index !== array.length - 1
+                      ? "border-b border-[rgba(255, 255, 255, 0.25)]"
+                      : ""
+                  }`}
+                >
+                  <div className="flex justify-between">
+                    <img
+                      className="w-6 h-6 rounded-full"
+                      src={applicant.img}
+                      alt={applicant.name}
+                    />
+                    <span className="ml-2 text-white text-sm leading-[16.94px]">
+                      {applicant.name}
+                    </span>
+                  </div>
+                  <div>
+                    <a
+                      className="text-white text-sm leading-[16.94px] underline"
+                      href={applicant.resumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Resume
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <a
-                    className="text-white text-sm leading-[16.94px] underline"
-                    href={applicant.resumeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Resume
-                  </a>
-                </div>
-              </div>
-            </li>
-          ))}
-          <button className="flex justify-center items-center bg-black text-center mx-auto px-4 py-2 rounded-[20px] text-[12px] leading-[14.52px]">
+              </li>
+            ))}
+        </ul>
+        {/* Show "See More" button if there are more applicants to display */}
+        {displayedApplicants < dashboardData.matchApplicants.length && (
+          <button
+            className="flex justify-center items-center bg-black text-center mx-auto px-4 py-2 rounded-[20px] text-[12px] leading-[14.52px]"
+            onClick={handleSeeMore}
+          >
             See More
           </button>
-        </ul>
+        )}
       </div>
     </div>
   );
