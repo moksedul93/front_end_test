@@ -1,0 +1,38 @@
+{
+    "date": "2024-05-13",
+    "dayName": "Friday",
+    "totalJobs": 10,
+    "totalApplicants": 50,
+    "jobTitles": [
+      "Front End Developer",
+      "Android Developer"
+    ],
+    "matchApplicants": [
+      {
+        "img": "/man1.png",
+        "name": "Fayez Hasan",
+        "resumeLink": "/resumes/fayez_hasan_resume.pdf"
+      },
+      {
+        "img": "/man2.png",
+        "name": "Shojib Ahmed",
+        "resumeLink": "/resumes/shojib_ahmed_resume.pdf"
+      },
+      {
+        "img": "/man3.png",
+        "name": "Tamanna Islam",
+        "resumeLink": "/resumes/tamanna_islam_resume.pdf"
+      },
+      {
+        "img": "/man4.png",
+        "name": "Arshad Khan",
+        "resumeLink": "/resumes/Arshad_Khan_resume.pdf"
+      },
+      {
+        "img": "/man5.png",
+        "name": "Abid Hasan",
+        "resumeLink": "/resumes/abid_hasan.pdf"
+      }
+    ]
+  }
+  

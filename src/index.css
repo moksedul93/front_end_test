@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "typeface-inter";
+body {
+  font-family: "inter", sans-serif;
+}
